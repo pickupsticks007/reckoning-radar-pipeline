@@ -74,7 +74,7 @@ async def fetch_document(url: str) -> dict:
     """
     print(f"\n📄 FETCHING: {url}")
 
-    async with httpx.AsyncClient(timeout=30.0) as http:
+    async with httpx.AsyncClient(timeout=httpx.Timeout(300.0, connect=30.0)) as http:
         response = await http.get(url, follow_redirects=True)
         response.raise_for_status()
 
