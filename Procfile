@@ -1,1 +1,1 @@
-worker: python pipeline.py https://www.justice.gov/storage/120919-examination.pdf initial_load
+worker: python jwiki_scraper_v2.py
